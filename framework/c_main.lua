@@ -67,7 +67,7 @@ allowedWeapons = { --"WEAPON_UNARMED",
 
 function Framework.init()
 	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), "FE_THDR_GTAO", "Role Play")
-	Citizen.Trace("JCRP: Initialized2\n");
+	Citizen.Trace("GlitchyBoi: Initialized2\n");
 	spawnPlayer();
 	setAutoSpawn(true);
 	SetNuiFocus(false);
