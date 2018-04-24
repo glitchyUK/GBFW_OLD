@@ -1,3 +1,10 @@
+------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
 -- This check if we're serverside
 if IsDuplicityVersion and IsDuplicityVersion() then
 	function addCommand(cmd,desc,sugg,func,perm)
@@ -5,15 +12,15 @@ if IsDuplicityVersion and IsDuplicityVersion() then
 		RegisterCommand(cmd,function(src,...)
 			local Err
 			if perm and tonumber(exports['framework']:getPlayerList()[tonumber(getPlayerSteamID(src))].admin_rank)<perm then
-				Err = "You don't have permission to do that!"
+				Err = "^3(INFO) You are unauthorized to run the command [ /" .. cmd .. " ]"
 			else
 				Err = func(src,...)
 			end
 
 			if Err then
 				TriggerClientEvent("chat:addMessage",src,{
-					color={255,50,50},args={
-						"Error",Err
+					color={0,0,0},args={
+						Err
 					}
 				})
 			end

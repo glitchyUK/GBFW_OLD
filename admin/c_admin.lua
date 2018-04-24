@@ -1,4 +1,12 @@
 ------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
+
+------------------------------------------------------------
 -- Global variables
 ------------------------------------------------------------
 
@@ -18,7 +26,6 @@ Admin.vehicles = {	-- ['Vehicle name']  = permission_level(int)
 					['EXEMPLAR'] = 15,
 					['RHINO'] = 10,
 				};
-
 
 ------------------------------------------------------------
 -- Client: head-tag functions
@@ -45,7 +52,6 @@ Citizen.CreateThread(function()
 					Citizen.InvokeNative( 0xBFEFE3321A3F5015, GetPlayerPed(id), "", false, false, "", false);
 					if (Admin.usersTags[GetPlayerName(id)]) then
 						DrawText3D(playerCoords.x + Admin.offsetX, playerCoords.y + Admin.offsetY, playerCoords.z + Admin.offsetZ, "~r~" .. Admin.usersTags[GetPlayerName(id)]);
-					-- Uncomment those lines to have player usernames displayed too
 						DrawText3D(playerCoords.x + Admin.offsetX, playerCoords.y + Admin.offsetY, playerCoords.z + Admin.offsetZ, "~r~" .. Admin.usersTags[GetPlayerName(id)] .. "\n~w~" .. id);
 					else
 						DrawText3D(playerCoords.x + Admin.offsetX, playerCoords.y + Admin.offsetY, playerCoords.z + Admin.offsetZ, "~w~" .. id);

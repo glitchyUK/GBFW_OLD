@@ -1,3 +1,10 @@
+------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
 addCLCommand("pos","Print your position",{
 },function(src,args)
 	local pos = GetEntityCoords(GetPlayerPed(-1))
@@ -9,11 +16,11 @@ end)
 
 addCLCommand("char", "/char select [charID] | /char create [firstname] [lastname] | /char delect [charID]", {}, function(src,args)
 	if (not Account.me.isLoggedIn) then
-		TriggerEvent("chat:addMessage", {color={255,255,255},args={"You are not logged in yet."}});
+		TriggerEvent("chat:addMessage", {color={255,255,255},args={"^3(INFO) You are not logged in yet"}});
 		return;
 	end
 	if (Account.me.currentCharacter) then
-		TriggerEvent("chat:addMessage", {color={255,255,255},args={"You already selected your character."}});
+		TriggerEvent("chat:addMessage", {color={255,255,255},args={"^3(INFO) You are already logged in"}});
 		return;
 	end
 
@@ -22,7 +29,7 @@ addCLCommand("char", "/char select [charID] | /char create [firstname] [lastname
 		Citizen.Trace("hi");
 		local charID = args[2];
 		if (not args[2]) then
-			TriggerEvent("chat:addMessage", {color={255,255,255},args={"Usage: /char select [charID]"}});
+			TriggerEvent("chat:addMessage", {color={255,255,255},args={"^3(INFO) Invalid Usage! /char select [CharacterID]"}});
 			return;
 		end
 		for i, row in ipairs(Account.me.characters) do
@@ -35,11 +42,11 @@ addCLCommand("char", "/char select [charID] | /char create [firstname] [lastname
 		local firstname = args[2];
 		local lastname = args[3];
 		if (not args[2] or not args[3]) then
-			TriggerEvent("chat:addMessage", {color={255,255,255},args={"Usage: /char create [firstname] [lastname]"}});
+			TriggerEvent("chat:addMessage", {color={255,255,255},args={"^3(INFO) Invalid Usage! /char create [FirstName] [LastName]"}});
 			return;
 		end
 		if (#Account.me.characters >= 5) then
-			TriggerEvent("chat:addMessage", {color={255,255,255},args={"You already have too many characters."}});
+			TriggerEvent("chat:addMessage", {color={255,255,255},args={"^3(INFO) You have reached the max amount of characters"}});
 			return;
 		end
 		TriggerServerEvent("Account:createNewCharacter", firstname, lastname);

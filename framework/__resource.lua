@@ -1,5 +1,12 @@
+------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
 resource_manifest_version "44febabe-d386-4d18-afbe-5e627f4af937"
-resource_type "gametype" { name = "GlitchyBoi" }
+resource_type "gametype" { name = "JCRP" }
 
 function shared_script(file)
 	client_script(file)

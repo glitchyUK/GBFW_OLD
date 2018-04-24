@@ -1,3 +1,10 @@
+------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
 RegisterNetEvent("AwesomeFreeze")
 RegisterNetEvent("AwesomeInvisible")
 RegisterNetEvent("AwesomeGod")

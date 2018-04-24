@@ -1,3 +1,10 @@
+------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
 Framework = setmetatable({}, Framework);
 Framework.__index = Framework;
 Framework.playerReady = false;
@@ -67,7 +74,7 @@ allowedWeapons = { --"WEAPON_UNARMED",
 
 function Framework.init()
 	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), "FE_THDR_GTAO", "Role Play")
-	Citizen.Trace("GlitchyBoi: Initialized2\n");
+	Citizen.Trace("JCRP: Initialized2\n");
 	spawnPlayer();
 	setAutoSpawn(true);
 	SetNuiFocus(false);
@@ -97,8 +104,8 @@ end)
 function Framework.onPlayerSpawned(spawn)
 	Citizen.Trace("Framework: spawned");
 	SetNuiFocus(false);
-	setPlayerInvisible(true);
-	setPlayerFrozen(true);
+	setPlayerInvisible(false);
+	setPlayerFrozen(false);
 	
 	Citizen.CreateThread(function()
 		Citizen.Wait(50);

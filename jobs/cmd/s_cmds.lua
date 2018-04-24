@@ -1,3 +1,10 @@
+------------------------------------------------------------
+------------------------------------------------------------
+---- Author: Dylan 'Itokoyamato' Thuillier              ----
+----                                                    ----
+---- Email: itokoyamato@hotmail.fr                      ----
+------------------------------------------------------------
+------------------------------------------------------------
 addCommand("cuff", "/cuff [playerID]", {}, function(src, args)
 	local steamID = getPlayerSteamID(src);
 	local target = tonumber(args[1]);
