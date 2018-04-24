@@ -1,5 +1,5 @@
 resource_manifest_version "44febabe-d386-4d18-afbe-5e627f4af937"
-resource_type "gametype" { name = "JCRP" }
+resource_type "gametype" { name = "GlitchyBoi" }
 
 function shared_script(file)
 	client_script(file)
