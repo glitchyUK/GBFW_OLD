@@ -1,2 +1,2 @@
-# JCRP-FW
-Justice Community RP Framework &amp; Assets
+# GBFW
+GlitchyBoi FW
